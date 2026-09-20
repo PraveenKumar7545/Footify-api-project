@@ -2,11 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  overflow-x: hidden;
-}
-
-
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +12,7 @@ body {
   font-family: Arial, sans-serif;
   background: #fffaf5;
   color: #222;
+  overflow-x: hidden;
 }
 
 a {
@@ -66,10 +62,6 @@ a {
   color: #e85d04;
 }
 
-.nav-links button:hover {
-  background: rgba(232, 93, 4, 0.1);
-}
-
 /* ===================== HERO ===================== */
 .hero {
   min-height: 550px;
@@ -86,6 +78,8 @@ a {
 .hero h1 {
   font-size: 60px;
   margin: 20px 0;
+  font-weight: 800;
+  line-height: 1.1;
 }
 
 .hero p {
@@ -114,17 +108,21 @@ a {
 }
 
 .section h2 {
-  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 12px;
 }
 
 .section-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 25px;
 }
 
 .section-heading a {
   color: #e85d04;
+  font-weight: 600;
 }
 
 .page {
@@ -149,6 +147,11 @@ a {
   overflow: hidden;
   text-align: center;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
 }
 
 .category-card img {
@@ -159,6 +162,7 @@ a {
 
 .category-card h3 {
   padding: 15px;
+  font-size: 18px;
 }
 
 /* ===================== FOOD GRID ===================== */
@@ -173,6 +177,11 @@ a {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
 }
 
 .food-card img {
@@ -186,12 +195,14 @@ a {
 }
 
 .food-content h3 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
 .food-content p {
   line-height: 1.5;
   color: #666;
+  font-size: 14px;
 }
 
 .food-info {
@@ -208,12 +219,11 @@ a {
   background: #e85d04;
   color: white;
   border-radius: 8px;
-  transition: background 0.2s ease, transform 0.15s ease;
+  transition: background 0.2s ease;
 }
 
 .view-btn:hover {
   background: #d04f00;
-  transform: translateY(-1px);
 }
 
 /* ===================== OFFERS ===================== */
@@ -236,6 +246,8 @@ a {
 
 .offer-card h2 {
   color: #e85d04;
+  font-size: 26px;
+  margin-bottom: 10px;
 }
 
 /* ===================== LOGIN / REGISTER ===================== */
@@ -279,12 +291,10 @@ a {
   color: white;
   border-radius: 7px;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .login-box button:hover {
   background: #d04f00;
-  transform: translateY(-1px);
 }
 
 /* ===================== SEARCH & FILTER ===================== */
@@ -315,7 +325,6 @@ a {
   color: #e85d04;
   border-radius: 20px;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .filters button:hover {
@@ -323,7 +332,6 @@ a {
   color: white;
 }
 
-/* ===================== FOOD DETAILS ===================== */
 /* ===================== FOOD DETAILS ===================== */
 .details-page {
   display: grid;
@@ -345,10 +353,6 @@ a {
   display: block;
 }
 
-.details-content {
-  padding-bottom: 20px;
-}
-
 .details-content h1 {
   font-size: 36px;
   margin-bottom: 12px;
@@ -398,88 +402,10 @@ a {
   font-weight: 600;
   border-radius: 10px;
   cursor: pointer;
-}
-/* Left image — stays fixed while page scrolls */
-.details-image {
-  position: sticky;
-  top: 90px;
-  align-self: start;
-}
-
-.details-image img {
-  width: 100%;
-  height: 520px;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  display: block;
-}
-
-/* Right side — normal page scroll */
-.details-content {
-  padding-bottom: 20px;
-}
-
-.details-content h1 {
-  font-size: 36px;
-  margin-bottom: 12px;
-}
-
-.details-content > p {
-  line-height: 1.7;
-  color: #666;
-  margin-bottom: 12px;
-}
-
-.custom-section {
-  background: #fff;
-  border-radius: 12px;
-  padding: 18px 20px;
-  margin: 18px 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-}
-
-.custom-section h3 {
-  margin: 0 0 14px;
-  font-size: 16px;
-}
-
-.custom-section label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 10px 0;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.custom-section input {
-  margin: 0;
-  cursor: pointer;
-}
-
-.final-price {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 24px 0 14px;
-}
-
-.add-cart-btn {
-  width: 100%;
-  padding: 15px;
-  border: none;
-  background: #e85d04;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .add-cart-btn:hover {
   background: #d04f00;
-  transform: translateY(-1px);
 }
 
 /* ===================== CART ===================== */
@@ -507,11 +433,6 @@ a {
   color: white;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.cart-item button:hover {
-  background: #b00000;
 }
 
 .cart-summary {
@@ -527,12 +448,6 @@ a {
   border: none;
   border-radius: 7px;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease;
-}
-
-.cart-summary button:hover {
-  background: #d04f00;
-  transform: translateY(-1px);
 }
 
 /* ===================== ORDERS ===================== */
@@ -560,11 +475,6 @@ a {
   background: #e85d04;
   color: white;
   border-radius: 7px;
-  transition: background 0.2s ease;
-}
-
-.empty-cart a:hover {
-  background: #d04f00;
 }
 
 /* ===================== FEEDBACK ===================== */
@@ -598,10 +508,6 @@ a {
   font-family: inherit;
 }
 
-.form-group textarea {
-  resize: vertical;
-}
-
 .submit-btn {
   width: 100%;
   padding: 14px;
@@ -611,20 +517,14 @@ a {
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .submit-btn:hover {
   background: #d04f00;
-  transform: translateY(-1px);
 }
 
 .feedback-list {
   margin-top: 50px;
-}
-
-.feedback-list h2 {
-  margin-bottom: 20px;
 }
 
 .feedback-card {
@@ -642,37 +542,18 @@ a {
   margin-bottom: 10px;
 }
 
-.feedback-card p {
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 8px;
-}
-
-.feedback-card small {
-  color: #888;
-}
-
-/* ===================== BUTTONS ===================== */
-button,
-.submit-btn,
-.add-cart-btn,
-.view-btn,
-.filters button {
-  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-
-button:hover:not(:disabled),
-.submit-btn:hover:not(:disabled),
-.add-cart-btn:hover:not(:disabled) {
-  filter: brightness(1.05);
-  box-shadow: 0 4px 12px rgba(232, 93, 4, 0.25);
-}
-
-button:disabled,
-.submit-btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+/* ===================== TOAST ===================== */
+.toast {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  background: #16a34a;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  font-weight: 500;
 }
 
 /* ===================== RESPONSIVE ===================== */
@@ -688,16 +569,16 @@ button:disabled,
     padding: 20px 5% 40px;
   }
 
-  .details-image {
-    position: static;
-  }
-
   .details-image img {
     height: 280px;
   }
 
   .hero h1 {
-    font-size: 45px;
+    font-size: 42px;
+  }
+
+  .section h2 {
+    font-size: 30px;
   }
 }
 
@@ -745,117 +626,8 @@ button:disabled,
   .login-box {
     width: 100%;
   }
-}
 
-/* =========================
-   GLOBAL HEADING STYLES
-========================= */
-
-h1,
-h2,
-h3 {
-  margin-top: 0;
-  font-weight: 700;
-}
-
-/* Main Hero Heading */
-.hero h1 {
-  font-size: 64px;
-  line-height: 1.05;
-  font-weight: 800;
-  letter-spacing: -1px;
-  margin-bottom: 20px;
-}
-
-/* Section Main Headings */
-.section h2,
-.offers h2 {
-  font-size: 42px;
-  line-height: 1.15;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-/* Category Card Heading */
-.category-card h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-top: 15px;
-}
-
-/* Food Card Heading */
-.food-card h3 {
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1.3;
-  margin-bottom: 8px;
-}
-
-/* Offer Card Heading */
-.offer-card h2 {
-  font-size: 28px;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-/* =========================
-   SECTION HEADING
-========================= */
-
-.section-heading h2 {
-  font-size: 42px;
-  font-weight: 800;
-  margin: 0;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 46px;
-  }
-
-  .section h2,
-  .offers h2,
-  .section-heading h2 {
-    font-size: 34px;
-  }
-
-  .category-card h3 {
-    font-size: 20px;
-  }
-
-  .food-card h3 {
-    font-size: 19px;
-  }
-
-  .offer-card h2 {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .section h2,
-  .offers h2,
-  .section-heading h2 {
-    font-size: 30px;
-  }
-
-  .category-card h3 {
-    font-size: 18px;
-  }
-
-  .food-card h3 {
-    font-size: 18px;
-  }
-
-  .offer-card h2 {
-    font-size: 22px;
+  .section h2 {
+    font-size: 26px;
   }
 }
