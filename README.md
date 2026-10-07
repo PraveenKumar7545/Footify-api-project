@@ -6,7 +6,7 @@ Foodify is a modern **React.js food ordering and customization web application**
 
 **Live Website:** https://foodifyapi.netlify.app/
 
-**GitHub Repository:** https://github.com/PraveenKumar7545/Footify-api-project
+**GitHub Repository:** https://github.com/PraveenKumar7545/Footify-api-project 
 
 ---
 
