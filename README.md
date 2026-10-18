@@ -16,7 +16,7 @@ Foodify provides a simple and interactive food ordering experience.
 
 Users can:
 
-* Explore different food categories
+* Explore different food categories 
 * Browse popular local dishes
 * Discover international dishes
 * Customize food items
