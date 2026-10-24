@@ -18,7 +18,7 @@ Users can:
 
 * Explore different food categories 
 * Browse popular local dishes
-* Discover international dishes
+* Discover international dishes 
 * Customize food items
 * Add food to cart
 * Place orders
