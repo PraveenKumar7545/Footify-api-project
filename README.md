@@ -10,7 +10,7 @@ Foodify is a modern **React.js food ordering and customization web application**
  
 ---
 
-## 📖 About 
+## 📖 About  
 
 Foodify provides a simple and interactive food ordering experience.
 
